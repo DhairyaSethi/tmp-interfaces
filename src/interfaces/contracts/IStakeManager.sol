@@ -7,4 +7,8 @@ interface IStakeManager {
         uint256 amount,
         bytes calldata extraData
     ) external;
+
+    function userCumalativeRunningSum(
+        address user
+    ) external view returns (uint256);
 }
