@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.19;
+pragma solidity >=0.6.2 <0.9.0;
 
-import "../IStateReceiver.sol";
+interface IStateReceiver {
+    function onStateReceive(uint256 counter, address sender, bytes calldata data) external;
+}
 
 struct ValidatorInit {
     address addr;
