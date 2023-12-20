@@ -12,4 +12,6 @@ interface IStakeManager {
         address user,
         bytes12 requestSalt
     ) external pure returns (int256);
+
+    function totalStakedFor(address addr) external view returns (int256 amt);
 }
